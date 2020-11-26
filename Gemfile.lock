@@ -58,10 +58,16 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    autoprefixer-rails (10.0.2.0)
+      execjs
     bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.5.1)
       msgpack (~> 1.0)
+    bootstrap (5.0.0.alpha3)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.14.3, < 2)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.33.0)
@@ -81,14 +87,31 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     erubi (1.10.0)
+    execjs (2.7.0)
+    faraday (1.1.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hashie (4.1.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    iex-ruby-client (1.4.0)
+      faraday (>= 0.17)
+      faraday_middleware
+      hashie
+      money_helper
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
+    jquery-rails (4.4.0)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
     listen (3.3.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -104,12 +127,19 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.2)
+    money (6.13.8)
+      i18n (>= 0.6.4, <= 2)
+    money_helper (1.0.2)
+      activesupport
+      money (~> 6.5)
     msgpack (1.3.3)
+    multipart-post (2.1.1)
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (1.2.3)
+    popper_js (1.16.0)
     public_suffix (4.0.6)
     puma (4.3.6)
       nio4r (~> 2.0)
@@ -152,6 +182,7 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    ruby2_keywords (0.0.2)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -213,10 +244,14 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  bootstrap (>= 4.5.3)
   byebug
   capybara (>= 2.15)
   devise
+  devise-bootstrap-views (~> 1.0)
+  iex-ruby-client
   jbuilder (~> 2.7)
+  jquery-rails
   listen (~> 3.2)
   pg (~> 1.2, >= 1.2.3)
   puma (~> 4.1)
