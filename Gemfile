@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '>= 4.5.3'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'iex-ruby-client'
+gem 'font-awesome-rails'
 
 gem 'jquery-rails'
 
